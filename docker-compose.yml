@@ -1,0 +1,10 @@
+version: '3'
+services:
+  darkice-icecast:
+    build: .
+    container_name: darkice-icecast
+    ports:
+      - "8000:8000"
+    devices:
+      - "/dev/snd:/dev/snd"  # Access to audio input
+    restart: unless-stopped
