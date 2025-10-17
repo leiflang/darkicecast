@@ -25,7 +25,6 @@ RUN mkdir -p /usr/local/icecast/logs \
 COPY icecast.xml /etc/icecast2/icecast.xml
 COPY darkice.cfg /etc/darkice/darkice.cfg
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY test.mp3 /etc/darkice/test.mp3
 
 # Switch to non-root user
 USER iceuser
