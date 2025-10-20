@@ -15,7 +15,7 @@ RUN useradd -m iceuser
 RUN mkdir -p /etc/icecast2 /etc/icecast2/log /etc/darkice
 
 # create the icecast log files
-RUN touch /etc/icecast2/log/access.log /etc/icecast2/log/icecast2/error.log
+RUN touch /etc/icecast2/log/access.log /etc/icecast2/log/error.log
 
 # provide ownership of the files to iceuser
 RUN chown -R iceuser:iceuser /etc/icecast2/log
