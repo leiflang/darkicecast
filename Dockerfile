@@ -9,19 +9,17 @@ RUN apt-get update && apt-get install -y \
 RUN useradd -m iceuser
 
 # Give the new user permission to read from the audio devices
-RUN usermod -aG audio iceuser
+# RUN usermod -aG audio iceuser
 
 # Create directories and set permissions
-RUN mkdir -p /etc/icecast2 /etc/darkice /usr/local/icecast \
-    && chown -R iceuser:iceuser /etc/icecast2 /etc/darkice /usr/local/icecast
+RUN mkdir -p /etc/icecast2 /etc/darkice /usr/local/icecast 
 
 # Create directories for supervisor and give iceuser permission
-RUN mkdir -p /var/log/supervisor \
-    && chown -R iceuser:iceuser /var/log/supervisor
+RUN mkdir -p /var/log/supervisor 
     
 # Create log directory for Icecast and give permissions
-RUN mkdir -p /usr/local/icecast/logs \
-    && chown -R iceuser:iceuser /usr/local/icecast
+# RUN mkdir -p /usr/local/icecast/logs \
+#     && chown -R iceuser:iceuser /usr/local/icecast
 
 
 # Copy configs
