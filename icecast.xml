@@ -15,7 +15,7 @@
     <limits>
         <clients>5</clients>
         <sources>2</sources>
-        <queue-size>128000</queue-size>
+        <queue-size>524288</queue-size>
         <client-timeout>30</client-timeout>
         <header-timeout>15</header-timeout>
         <source-timeout>10</source-timeout>
