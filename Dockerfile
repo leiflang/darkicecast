@@ -30,9 +30,6 @@ COPY darkice.cfg /etc/darkice/darkice.cfg
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 
-# Switch to non-root user
-USER iceuser
-
 # Expose Icecast port
 EXPOSE 8000
 
