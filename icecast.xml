@@ -195,9 +195,9 @@
 
         <!-- Note that if <chroot> is turned on below, these paths must both
              be relative to the new root, not the original root -->
-        <logdir>/var/log/icecast2</logdir>
-        <webroot>/usr/share/icecast2/web</webroot>
-        <adminroot>/usr/share/icecast2/admin</adminroot>
+        <logdir>/etc/icecast2/log</logdir>
+        <webroot>/etc/icecast2/web</webroot>
+        <adminroot>/etc/icecast2/admin</adminroot>
         <!-- <pidfile>/usr/share/icecast2/icecast.pid</pidfile> -->
 
         <!-- Aliases: treat requests for 'source' path as being for 'dest' path
@@ -233,7 +233,7 @@
     </logging>
 
     <security>
-        <chroot>1</chroot>
+        <chroot>0</chroot>
         
         <changeowner>
             <user>iceuser</user>

@@ -12,7 +12,10 @@ RUN useradd -m iceuser
 # RUN usermod -aG audio iceuser
 
 # Create directories and set permissions
-RUN mkdir -p /etc/icecast2 /etc/darkice /usr/local/icecast 
+RUN mkdir -p /etc/icecast2 /etc/darkice
+
+# create the icecast log files
+RUN touch /etc/icecast2/log/access.log /etc/icecast2/log/icecast2/error.log
 
 # Create directories for supervisor and give iceuser permission
 RUN mkdir -p /var/log/supervisor 
