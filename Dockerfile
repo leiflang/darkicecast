@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 # Install packages
 RUN apt-get update && apt-get install -y \
-    icecast2 darkice supervisor \
+    icecast2 darkice alsa-utils supervisor \
     && rm -rf /var/lib/apt/lists/*
 
 # Create non-root user
