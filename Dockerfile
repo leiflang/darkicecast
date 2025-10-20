@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
 # Create non-root user
 RUN useradd -m iceuser
 
+# Give the new user permission to read from the audio devices
+RUN usermod -aG audio iceuser
+
 # Create directories and set permissions
 RUN mkdir -p /etc/icecast2 /etc/darkice /usr/local/icecast \
     && chown -R iceuser:iceuser /etc/icecast2 /etc/darkice /usr/local/icecast
@@ -25,6 +28,7 @@ RUN mkdir -p /usr/local/icecast/logs \
 COPY icecast.xml /etc/icecast2/icecast.xml
 COPY darkice.cfg /etc/darkice/darkice.cfg
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 
 # Switch to non-root user
 USER iceuser
