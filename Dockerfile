@@ -26,9 +26,6 @@ COPY icecast.xml /etc/icecast2/icecast.xml
 COPY darkice.cfg /etc/darkice/darkice.cfg
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Switch to the line in on the sound card
-RUN amixer -c 0 sset 'PCM Capture Source' 'Line'
-
 # Switch to non-root user
 USER iceuser
 
