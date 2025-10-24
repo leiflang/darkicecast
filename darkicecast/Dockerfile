@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Install packages
-RUN apk add --no-cache icecast darkice pulseaudio-utils
+RUN apk add --no-cache icecast icecast-doc darkice pulseaudio-utils
 
 # Create non-root user
 RUN adduser -D iceuser
