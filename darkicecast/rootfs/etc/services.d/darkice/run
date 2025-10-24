@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bashio
 bashio::log.info "Starting DarkIce..."
 # exec /usr/bin/darkice -c /etc/darkice/darkice.cfg
-exec /usr/bin/darkice -c /etc/darkice/darkice.cfg
+exec /usr/bin/darkice -c /etc/darkice/darkice.cfg -v 10
