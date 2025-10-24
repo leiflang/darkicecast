@@ -6,9 +6,6 @@ RUN apt-get update && apt-get install -y \
     icecast2 darkice alsa-utils \
     && rm -rf /var/lib/apt/lists/*
 
-# Make run.sh executable
-RUN chmod +x run.sh
-
 # Create non-root user
 RUN useradd -m iceuser
 
@@ -22,5 +19,9 @@ COPY darkice.cfg /etc/darkice/darkice.cfg
 COPY run.sh /run.sh
 # Expose Icecast port
 EXPOSE 8000
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
 
 ENTRYPOINT [ "/run.sh" ]
