@@ -1,11 +1,14 @@
 name: "Dark Ice Cast"
-version: "1.2.0-beta"
+version: "1.2.1-beta"
 slug: "darkicecast"
 description: "Streams audio using DarkIce and Icecast"
+url: "https://github.com/leiflang/darkicecast"
 arch:
   - amd64
   - armv7
   - armhf
+startup: services
+boot: auto
 ports:
   8000/tcp: 8000
 devices:
@@ -16,3 +19,4 @@ options:
   log_level: info
 schema:
   log_level: list(info|debug|warning|error)
+image: "local/darkicecast-addon"
