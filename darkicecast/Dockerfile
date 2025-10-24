@@ -3,9 +3,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Install packages
-RUN apt-get update && apt-get install -y \
-    icecast2 darkice alsa-utils \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache icecast darkice alsa-utils
 
 # Create non-root user
 RUN useradd -m iceuser
