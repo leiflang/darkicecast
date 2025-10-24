@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bashio
 bashio::log.info "Starting Icecast..."
 # exec /usr/bin/icecast2 -c /etc/icecast2/icecast.xml
-exec icecast2 -c /etc/icecast2/icecast.xml
+exec /usr/bin/icecast -c /etc/icecast2/icecast.xml
