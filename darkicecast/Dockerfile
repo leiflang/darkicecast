@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y \
     icecast2 darkice alsa-utils \
     && rm -rf /var/lib/apt/lists/*
 
+# Make run.sh executable
+RUN chmod +x run.sh
+
 # Create non-root user
 RUN useradd -m iceuser
 
