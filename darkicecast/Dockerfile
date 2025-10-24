@@ -1,5 +1,6 @@
 
-FROM debian:stable-slim
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Install packages
 RUN apt-get update && apt-get install -y \
