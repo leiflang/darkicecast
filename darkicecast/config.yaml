@@ -1,5 +1,5 @@
 name: "Dark Ice Cast"
-version: "1.2.3-beta"
+version: "1.2.4-beta"
 slug: "darkicecast"
 description: "Streams audio using DarkIce and Icecast"
 url: "https://github.com/leiflang/darkicecast"
@@ -8,6 +8,7 @@ arch:
   - armv7
   - armhf
 init: false
+audio: true
 ports:
   8000/tcp: 8000
 devices:
