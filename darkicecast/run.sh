@@ -1,4 +1,6 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
+
+echo "Starting DarkIce and Icecast..."
 # Configure audio input
 amixer -c 0 sset 'PCM Capture Source' 'Line'
 
