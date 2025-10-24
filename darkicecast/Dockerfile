@@ -14,8 +14,8 @@ RUN mkdir -p /etc/icecast2 /etc/icecast2/log /etc/darkice
 RUN touch /etc/icecast2/log/access.log /etc/icecast2/log/error.log
 RUN chown -R iceuser:iceuser /etc/icecast2/log
 # Copy configs
-COPY /darkicecasticecast.xml /etc/icecast2/icecast.xml
-COPY /darkicecastdarkice.cfg /etc/darkice/darkice.cfg
+COPY /darkicecast/icecast.xml /etc/icecast2/icecast.xml
+COPY /darkicecast/darkice.cfg /etc/darkice/darkice.cfg
 # Expose Icecast port
 EXPOSE 8000
 
