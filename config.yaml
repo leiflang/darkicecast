@@ -1,0 +1,20 @@
+name: "Dark Ice Cast"
+version: "1.0.0"
+slug: "darkicecast"
+description: "Streams audio using DarkIce and Icecast"
+arch:
+  - amd64
+  - armv7
+  - armhf
+startup: services
+boot: auto
+ports:
+  8000/tcp: 8000
+devices:
+  - "/dev/snd:/dev/snd"
+map:
+  - config:rw
+options:
+  log_level: info
+schema:
+  log_level: list(info|debug|warning|error)
