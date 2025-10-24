@@ -13,8 +13,8 @@ RUN mkdir -p /etc/icecast2 /etc/icecast2/log /etc/darkice \
     && chown -R iceuser:iceuser /etc/icecast2/log
 
 # Copy configs
-COPY icecast.xml /etc/icecast2/icecast.xml
-COPY darkice.cfg /etc/darkice/darkice.cfg
+COPY config/icecast.xml /etc/icecast2/icecast.xml
+COPY config/darkice.cfg /etc/darkice/darkice.cfg
 
 # Expose Icecast port
 EXPOSE 8000
